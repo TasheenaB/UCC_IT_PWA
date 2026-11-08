@@ -1,0 +1,32 @@
+{
+    "name": "UCC IT Department",
+    "short_name": "UCC IT",
+    "background_color": "#0a3a8f",
+    "description": "Faculty directory, courses and admissions for the UCC Department of Information Technology.",
+    "display": "standalone",
+    "theme_color": "#0a3a8f",
+    "start_url": "/",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "screenshots/home-wide.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Home screen on desktop"
+        },
+        {
+            "src": "screenshots/home-narrow.png",
+            "sizes": "540x720",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Home screen on mobile"
+        }
+    ]
+}

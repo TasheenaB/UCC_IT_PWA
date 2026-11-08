@@ -1,0 +1,326 @@
+/* UCC IT Department app styles */
+/* colours based on the UCC website (blue and gold) - change them here */
+:root {
+    --primary: #0a3a8f;
+    --primary-dark: #072a69;
+    --secondary: #f6c026;
+    --light: #eaf0fb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f3f6fb;
+    color: #1e293b;
+}
+
+/* top bar */
+.topbar {
+    background-color: var(--primary);
+    color: #ffffff;
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    border-bottom: 5px solid var(--secondary);
+}
+
+.topbar h1 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.back {
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: bold;
+}
+
+/* main content */
+.content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 15px 130px 15px;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #475569;
+}
+
+/* home menu */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.menu-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-bottom: 5px solid var(--secondary);
+}
+
+.menu-card:hover {
+    background-color: var(--light);
+}
+
+.menu-card .icon {
+    display: block;
+    font-size: 2.3em;
+    margin-bottom: 8px;
+}
+
+.menu-card .label {
+    font-weight: bold;
+}
+
+/* cards used on the pages */
+.staff-card, .course-card, .info-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    border-left: 5px solid var(--secondary);
+}
+
+.staff-card {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.staff-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid var(--primary);
+    flex-shrink: 0;
+}
+
+.staff-info h2, .course-card h2, .info-card h2 {
+    margin: 0 0 8px 0;
+    font-size: 1.1em;
+    color: var(--primary);
+}
+
+.staff-info p, .course-card p {
+    margin: 3px 0;
+}
+
+.position {
+    color: #475569;
+    font-style: italic;
+}
+
+/* buttons */
+.buttons {
+    margin-top: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin-right: 6px;
+}
+
+.btn-call {
+    background-color: #28a745;
+}
+
+.btn-email {
+    background-color: var(--primary);
+}
+
+.btn-apply {
+    background-color: var(--secondary);
+    color: var(--primary-dark);
+    margin-top: 10px;
+}
+
+.btn-apply:hover {
+    background-color: #e0a800;
+}
+
+/* course search */
+.search {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* admissions */
+.info-card a {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.info-card .btn-apply {
+    color: var(--primary-dark);
+}
+
+.checks, .plain {
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.checks > li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+/* tick mark in front of each requirement */
+.checks > li::before {
+    content: "\2713";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.plain {
+    margin-top: 8px;
+}
+
+.plain li {
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+/* social media tabs */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tab {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px;
+    border: 2px solid var(--primary);
+    background-color: #ffffff;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 0.85em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.tab .icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* each app has its own colour when selected */
+.tab-facebook.active {
+    background-color: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+}
+
+.tab-twitter.active {
+    background-color: #000000;
+    border-color: #000000;
+    color: #ffffff;
+}
+
+.tab-instagram.active {
+    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
+    border-color: #dc2743;
+    color: #ffffff;
+}
+
+.panel {
+    display: none;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border-top: 5px solid var(--secondary);
+}
+
+.panel.active {
+    display: block;
+}
+
+.open-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.link-facebook { color: #1877f2; }
+.link-twitter { color: #000000; }
+.link-instagram { color: #dc2743; }
+
+/* Email FAB (floating button) - sits above the PWA install button */
+.fab {
+    position: fixed;
+    right: 24px;
+    bottom: 100px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-size: 1.7em;
+    text-align: center;
+    line-height: 58px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.fab:hover {
+    background-color: #e0a800;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: #475569;
+    padding: 10px 15px 100px 15px;
+}
+
+.footer p {
+    margin: 3px 0;
+}
